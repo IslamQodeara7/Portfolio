@@ -9,11 +9,11 @@ $(".nav-link").click(function () {
     // $(this).parent().siblings().find('a').removeClass("linkActive")
 });
 $(document).ready(() => {
- 
+
     $(`.myName1`).css({ display: 'inline-block' });
     $(`.myName1`).siblings().css({ display: 'none' });
     // $(`.myName1`).siblings().css({display:'none'});
-    
+
     paletteNumber = localStorage.getItem('palette');
 
     switch (paletteNumber) {
@@ -35,11 +35,30 @@ $(document).ready(() => {
             document.documentElement.style.setProperty(color3, palette3.clr3);
             document.documentElement.style.setProperty(color4, palette3.clr4);
             break;
-     
+        case 'four':
+            document.documentElement.style.setProperty(color1, palette4.clr1);
+            document.documentElement.style.setProperty(color2, palette4.clr2);
+            document.documentElement.style.setProperty(color3, palette4.clr3);
+            document.documentElement.style.setProperty(color4, palette4.clr4);
+            break;
+        case 'five':
+            document.documentElement.style.setProperty(color1, palette5.clr1);
+            document.documentElement.style.setProperty(color2, palette5.clr2);
+            document.documentElement.style.setProperty(color3, palette5.clr3);
+            document.documentElement.style.setProperty(color4, palette5.clr4);
+            break;
+        case 'six':
+            document.documentElement.style.setProperty(color1, palette6.clr1);
+            document.documentElement.style.setProperty(color2, palette6.clr2);
+            document.documentElement.style.setProperty(color3, palette6.clr3);
+            document.documentElement.style.setProperty(color4, palette6.clr4);
+            break;
+        
+
 
     }
     AOS.init();
-   
+
     var mixer = mixitup(".videosItems", {
         selectors: {
             target: '.videosItems .item'
@@ -82,6 +101,25 @@ let palette3 = {
     clr4: "#f806cc"
 }
 
+let palette4 = {
+    clr1: "#fff5e0",
+    clr2: "#ff6969",
+    clr3: "#bb2525",
+    clr4: "#141e46"
+}
+let palette5 = {
+    clr1: "#040d12",
+    clr2: "#183d3d",
+    clr3: "#5c8374",
+    clr4: "#93b1a6"
+}
+let palette6 = {
+    clr1: "#fff3da",
+    clr2: "#dfccfb",
+    clr3: "#d0bfff",
+    clr4: "#beadfa"
+}
+
 
 
 const color1 = "--clr1";
@@ -95,22 +133,22 @@ const color4 = "--clr4";
 
 
 $('.palette1').click(() => {
-    
+
     localStorage.setItem('palette', 'one');
     document.documentElement.style.setProperty(color1, palette1.clr1);
     document.documentElement.style.setProperty(color2, palette1.clr2);
     document.documentElement.style.setProperty(color3, palette1.clr3);
     document.documentElement.style.setProperty(color4, palette1.clr4);
-    
+
 });
 $('.palette2').click(() => {
-   
+
     localStorage.setItem('palette', 'two');
     document.documentElement.style.setProperty(color1, palette2.clr1);
     document.documentElement.style.setProperty(color2, palette2.clr2);
     document.documentElement.style.setProperty(color3, palette2.clr3);
     document.documentElement.style.setProperty(color4, palette2.clr4);
-    
+
 });
 $('.palette3').click(() => {
 
@@ -119,8 +157,36 @@ $('.palette3').click(() => {
     document.documentElement.style.setProperty(color2, palette3.clr2);
     document.documentElement.style.setProperty(color3, palette3.clr3);
     document.documentElement.style.setProperty(color4, palette3.clr4);
-    
+
 });
+$('.palette4').click(() => {
+
+    localStorage.setItem('palette', 'four');
+    document.documentElement.style.setProperty(color1, palette4.clr1);
+    document.documentElement.style.setProperty(color2, palette4.clr2);
+    document.documentElement.style.setProperty(color3, palette4.clr3);
+    document.documentElement.style.setProperty(color4, palette4.clr4);
+
+});
+$('.palette5').click(() => {
+
+    localStorage.setItem('palette', 'five');
+    document.documentElement.style.setProperty(color1, palette5.clr1);
+    document.documentElement.style.setProperty(color2, palette5.clr2);
+    document.documentElement.style.setProperty(color3, palette5.clr3);
+    document.documentElement.style.setProperty(color4, palette5.clr4);
+
+});
+$('.palette6').click(() => {
+
+    localStorage.setItem('palette', 'six');
+    document.documentElement.style.setProperty(color1, palette6.clr1);
+    document.documentElement.style.setProperty(color2, palette6.clr2);
+    document.documentElement.style.setProperty(color3, palette6.clr3);
+    document.documentElement.style.setProperty(color4, palette6.clr4);
+
+});
+
 
 
 setInterval(() => {
