@@ -12,7 +12,9 @@
     src: url("../fonts/Harlow\ Solid\ Italic\ Italic.ttf");
 }
 
-
+body{
+    overflow-x: hidden !important;
+}
 
 
 

@@ -47,12 +47,7 @@ $(document).ready(() => {
             document.documentElement.style.setProperty(color3, palette5.clr3);
             document.documentElement.style.setProperty(color4, palette5.clr4);
             break;
-        case 'six':
-            document.documentElement.style.setProperty(color1, palette6.clr1);
-            document.documentElement.style.setProperty(color2, palette6.clr2);
-            document.documentElement.style.setProperty(color3, palette6.clr3);
-            document.documentElement.style.setProperty(color4, palette6.clr4);
-            break;
+       
         
 
 
@@ -113,12 +108,7 @@ let palette5 = {
     clr3: "#5c8374",
     clr4: "#93b1a6"
 }
-let palette6 = {
-    clr1: "#fff3da",
-    clr2: "#dfccfb",
-    clr3: "#d0bfff",
-    clr4: "#beadfa"
-}
+
 
 
 
@@ -177,15 +167,7 @@ $('.palette5').click(() => {
     document.documentElement.style.setProperty(color4, palette5.clr4);
 
 });
-$('.palette6').click(() => {
 
-    localStorage.setItem('palette', 'six');
-    document.documentElement.style.setProperty(color1, palette6.clr1);
-    document.documentElement.style.setProperty(color2, palette6.clr2);
-    document.documentElement.style.setProperty(color3, palette6.clr3);
-    document.documentElement.style.setProperty(color4, palette6.clr4);
-
-});
 
 
 
