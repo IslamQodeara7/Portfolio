@@ -12,7 +12,7 @@
     src: url("../fonts/Harlow\ Solid\ Italic\ Italic.ttf");
 }
 
-body{
+body {
     overflow-x: hidden !important;
 }
 
@@ -89,7 +89,7 @@ body {
 .contactSide a {
     color: var(--clr1);
     text-align: center;
-   
+
     text-decoration: none;
 }
 
@@ -208,25 +208,26 @@ footer .contactLinks a i {
 
 
 
-.skills li{
+.skills li {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     text-align: center;
 }
-.skills li i{
+
+.skills li i {
     color: var(--clr4);
 }
 
-.skills li div{
+.skills li div {
     text-align: center !important;
     width: 100%;
     position: relative;
     color: var(--clr4);
 }
 
-.skills li div::after{
+.skills li div::after {
     content: "";
     position: absolute;
     top: 0%;
@@ -235,10 +236,11 @@ footer .contactLinks a i {
     height: 15px;
     border-top: 2px solid var(--clr3);
     border-left: 2px solid var(--clr3);
-    background-image: linear-gradient(135deg,var(--clr3) 50%,transparent 50%);
+    background-image: linear-gradient(135deg, var(--clr3) 50%, transparent 50%);
     animation: upper 1s infinite;
 }
-.skills li div::before{
+
+.skills li div::before {
     content: "";
     position: absolute;
     bottom: 0%;
@@ -248,7 +250,7 @@ footer .contactLinks a i {
     border-bottom: 2px solid var(--clr3);
     border-right: 2px solid var(--clr3);
     animation: lower 1s infinite;
-    background-image: linear-gradient(-45deg,var(--clr3) 50%,transparent 50%);
+    background-image: linear-gradient(-45deg, var(--clr3) 50%, transparent 50%);
 }
 
 .skills h2 .txt::first-letter,
@@ -282,10 +284,11 @@ footer .contactLinks a i {
 
 .loading {
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+ 
     background-color: var(--clr1);
     z-index: 251;
     display: flex;
@@ -455,13 +458,23 @@ footer .contactLinks a i {
     background-color: transparent;
     padding: 20px;
     color: var(--clr4);
-    border: none !important;
+    margin: 5px;
+    border: 2px solid var(--clr4);
     box-shadow: none !important;
     outline: none !important;
     font-size: 20px;
     font-weight: bold;
+    transition: all .7s;
+    border-radius: 30px;
+}
+
+.filterButtons button:hover {
+
+    background-color: var(--clr4);
+    color: var(--clr1);
 
 }
+
 
 .filterButtons button:focus {
     color: var(--clr3);
@@ -545,4 +558,92 @@ iframe {
 
         transform: rotate(360deg);
     }
+}
+
+
+@media screen and (max-width:767px) {
+    h2 {
+        font-size: 30px !important;
+    }
+
+    svg {
+        width: 20px !important;
+        height: 20 !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+
+    body {
+        overflow-x: hidden !important;
+        font-size: 12px;
+    }
+
+    .contactSide {
+        display: none;
+    }
+
+    .skills h2 .txt::first-letter,
+    .aboutMe h2 .txt::first-letter,
+    .services h2 .txt::first-letter,
+    .portfolio h2 .txt::first-letter {
+        font-size: 40px;
+    }
+
+    .aboutImage .image {
+        width: 100px;
+        height: 150px;
+        position: relative;
+    }
+
+    .skills, .aboutMe, .services, .portfolio {
+        font-size: 12px;
+    }
+
+    .seeking {
+        font-size: 12px !important;
+    }
+
+    footer .contactLinks a {
+        width: 25px;
+        height: 25px;
+        margin: 10px 2.5px;
+    }
+
+    footer .contactLinks a i {
+        font-size: 12.5px !important;
+
+    }
+
+    .aboutImage .image::before {
+        width: 17.5px;
+        height: 17.5px;
+        border-top: 5px solid var(--clr3);
+        border-left: 5px solid var(--clr3);
+
+    }
+
+    .aboutImage .image::after {
+        width: 17.5px;
+        height: 17.5px;
+        border-bottom: 5px solid var(--clr3);
+        border-right: 5px solid var(--clr3);
+
+    }
+
+    .filterButtons button {
+        font-size: 12px;
+        padding: 7px;
+    }
+
+    .loading{
+     top: 0% !important;
+     left: 0% !important;
+     right: 0% !important;
+     bottom: 0% !important;
+     width: 100% !important;
+     height: 100% !important;
+
+    }
+
+
 }

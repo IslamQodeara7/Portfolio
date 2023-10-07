@@ -47,8 +47,8 @@ $(document).ready(() => {
             document.documentElement.style.setProperty(color3, palette5.clr3);
             document.documentElement.style.setProperty(color4, palette5.clr4);
             break;
-       
-        
+
+
 
 
     }
