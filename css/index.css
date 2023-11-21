@@ -9,8 +9,8 @@
 
 
 @font-face {
-    font-family: "harlow";
-    src: url("../fonts/Harlow\ Solid\ Italic\ Italic.ttf");
+    font-family: "expo";
+    src: url("../fonts/Expo\ Regular.ttf");
 }
 
 body {
@@ -26,7 +26,7 @@ body {
 
 
 .fontType {
-    font-family: 'harlow';
+    font-family: 'expo';
 }
 
 .endline {
