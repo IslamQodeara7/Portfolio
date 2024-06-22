@@ -8,15 +8,17 @@
 
 
 
-@font-face {
-    font-family: "expo";
-    src: url("../fonts/Expo\ Regular.ttf");
-}
+
 
 body {
     overflow-x: hidden !important;
 }
 
+
+@font-face {
+    font-family: "jose";
+    src: url("../fonts/JosefinSans-Italic-VariableFont_wght.ttf");
+}
 
 
 
@@ -26,7 +28,7 @@ body {
 
 
 .fontType {
-    font-family: 'expo';
+    font-family: 'jose';
 }
 
 .endline {
