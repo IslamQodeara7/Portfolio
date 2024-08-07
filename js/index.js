@@ -1,6 +1,17 @@
 let font = '';
 let paletteNumber = 'zero';
 let quote = 1;
+let skills = ["HTML","CSS","JavaScript","Bootstrap","jQuery","Angular","SCSS","TypeScript"];
+let skillsResult = "";
+
+skills.forEach(item=>{
+    skillsResult+=`<li class="col-md-3 px-5" data-aos="fade-up">
+          <div class="my-3 py-3">${item}</div>
+        </li>`
+})
+
+
+
 $(".nav-link").click(function () {
     let Href = $(this).attr("linker")
     let sectionOffest = $(Href).offset().top
