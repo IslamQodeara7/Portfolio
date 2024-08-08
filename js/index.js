@@ -1,21 +1,42 @@
 let font = '';
 let paletteNumber = 'zero';
 let quote = 1;
-let skills = ["HTML","CSS","JavaScript","Bootstrap","jQuery","Angular","SCSS","TypeScript"];
+let skills = ["HTML","CSS","JavaScript","Bootstrap","jQuery","Angular","SCSS","TypeScript","Git & Github","Ecmascript 6","C# Basics","C# OOP","Advanced C#","SQL Server","LINQ"];
 let skillsResult = "";
+let ProjectsResult = "";
+let Projects = [
+ {name:"Angora",link:"https://github.com/IslamQodeara7/Angora",category:"c1"},
+ {name:"ACME-Angular",link:"https://github.com/IslamQodeara7/ACME-Angular",category:"c2"},
+ {name:"Bakery",link:"https://github.com/IslamQodeara7/Bakery",category:"c1"},
+ {name:"Start Angular",link:"https://github.com/IslamQodeara7/StartAngular",category:"c2"},
+ {name:"Bookmark",link:"https://github.com/IslamQodeara7/Bookmark",category:"c1"},
+ {name:"Food Recipes",link:"https://github.com/IslamQodeara7/Food-Recipes",category:"c1"},
+ {name:"Local Time Watch",link:"https://github.com/IslamQodeara7/local-time-watch",category:"c1"},
+ {name:"Movies DB",link:"https://github.com/IslamQodeara7/MovieDB",category:"c1"},
+ {name:"Alex Smith",link:"https://github.com/IslamQodeara7/AlexSmith",category:"c1"},
+ {name:"Nice Slider",link:"https://github.com/IslamQodeara7/HandMadeSlider",category:"c1"},
+ {name:"Qoute of The Day",link:"https://github.com/IslamQodeara7/QouteOfTheDay",category:"c1"},
+ {name:"Simone",link:"https://github.com/IslamQodeara7/Simone",category:"c1"},
+ {name:"Smart Login System",link:"https://github.com/IslamQodeara7/SmartLoginSystem",category:"c1"},
+ {name:"Weather Forecast",link:"https://github.com/IslamQodeara7/WeatherAPI",category:"c1"},
+ {name:"Chicken Farms",link:"https://github.com/IslamQodeara7/chickenFarms",category:"c1"},
+ {name:"Morph",link:"https://github.com/IslamQodeara7/broklyn",category:"c1"},
+ {name:"Angular Notes 1",link:"https://github.com/IslamQodeara7/AngularNotes1",category:"c2"},
+ {name:"Angular Notes 2",link:"https://github.com/IslamQodeara7/AngularNotes2",category:"c2"},
+ {name:"Movies Database",link:"https://github.com/IslamQodeara7/MoviesDatabase",category:"c2"},
 
-skills.forEach(item=>{
-    skillsResult+=`<li class="col-md-3 px-5" data-aos="fade-up">
-          <div class="my-3 py-3">${item}</div>
-        </li>`
-})
+
+
+]
+
+
 
 
 
 $(".nav-link").click(function () {
     let Href = $(this).attr("linker")
     let sectionOffest = $(Href).offset().top
-    $("body,html").animate({ scrollTop: sectionOffest }, 500)
+    $("body,html").animate({ scrollTop: sectionOffest }, 250)
     // $(this).addClass('linkActive')
     // $(this).parent().siblings().find('a').removeClass("linkActive")
 });
@@ -74,6 +95,25 @@ $(document).ready(() => {
         }
     });
     hideLoading();
+    skills.forEach(item=>{
+        skillsResult+=`<li class="col-md-3 px-5" data-aos="fade-up">
+              <div class="my-3 py-3">${item}</div>
+            </li>`
+    })
+    $(".skillsItems").html(skillsResult);
+    Projects.forEach(item=>{
+        ProjectsResult+=` <div class="col-md-4 item ${item.category} text-center p-3">
+          <h5 class="text-center">
+            
+            <span>
+              <a target="_blank" class="mx-2" href=${item.link}>
+                ${item.name}</a>
+            </span>
+          </h5>
+        
+        </div>`
+    })
+    $(".videosItems").html(ProjectsResult);
 
 })
 function showLoading() {
