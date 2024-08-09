@@ -86,6 +86,38 @@ $(document).ready(() => {
     }
     AOS.init();
 
+    Projects.forEach(item=>{
+        switch(item.category){
+            case "c1":
+                ProjectsResult+=` <div class="col-md-4 item  text-center p-3 c1">
+                <h5 class="text-center">
+                  
+                  <span>
+                    <a target="_blank" class="mx-2" href=${item.link}>
+                      ${item.name}</a>
+                  </span>
+                </h5>
+              
+              </div>`
+              break;
+              case "c2":
+                ProjectsResult+=` <div class="col-md-4 item  text-center p-3 c2">
+                <h5 class="text-center">
+                  
+                  <span>
+                    <a target="_blank" class="mx-2" href=${item.link}>
+                      ${item.name}</a>
+                  </span>
+                </h5>
+              
+              </div>`
+              break;
+        }
+       
+    })
+
+    $(".videosItems").html(ProjectsResult);
+
     var mixer = mixitup(".videosItems", {
         selectors: {
             target: '.videosItems .item'
@@ -99,21 +131,11 @@ $(document).ready(() => {
         skillsResult+=`<li class="col-md-3 px-5" data-aos="fade-up">
               <div class="my-3 py-3">${item}</div>
             </li>`
-    })
+    });
+
+    
     $(".skillsItems").html(skillsResult);
-    Projects.forEach(item=>{
-        ProjectsResult+=` <div class="col-md-4 item ${item.category} text-center p-3">
-          <h5 class="text-center">
-            
-            <span>
-              <a target="_blank" class="mx-2" href=${item.link}>
-                ${item.name}</a>
-            </span>
-          </h5>
-        
-        </div>`
-    })
-    $(".videosItems").html(ProjectsResult);
+    
 
 })
 function showLoading() {
